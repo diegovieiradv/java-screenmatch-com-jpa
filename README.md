@@ -1,17 +1,36 @@
+![Prévia do Projeto](https://via.placeholder.com/1200x600.png?text=Portfolio+ScreenMatch)
 
-![Programação-Formação Java](https://github.com/iasminaraujoc/3355-java-screenmatch-com-jpa/assets/84939115/3c51e000-962d-4dc9-97fc-1d384e2511a2)
+# Screenmatch — Persistência de dados com Spring Data JPA
 
-# Java: persistência de dados e consultas com Spring Data JPA
+Este é um projeto base que estou evoluindo a partir dos estudos em Java. A ideia é ampliar funções, melhorar o código e transformar em um projeto mais completo ao longo do tempo.
 
-Projeto desenvolvido no segundo curso da formação Avançando com Java da Alura
+## 🎯 O que o projeto faz
 
+- Menu interativo com várias opções.
+- Modelagem das classes, enums, atributos e métodos.
+- Consumo de API externa.
+- Persistência de dados usando Spring Data JPA.
+- Uso do PostgreSQL.
+- Consultas avançadas com JPARepository.
 
-## 🔨 Objetivos do projeto
+📌 Observação
 
-- Evoluir no projeto Screenmatch, iniciado no primeiro curso da formação, criando um menu com várias opções;
-- Modelar as abstrações da aplicação através de classes, enums, atributos e métodos;
-- Consumir a API do ChatGPT;
-- Utilizar o Spring Data JPA para persistir dados no banco;
-- Conhecer vários tipos de banco de dados e utilizar o PostgreSQL;
-- Trabalhar com vários tipos de consultas ao banco de dados;
-- Aprofundar na interface JPARepository
+Este projeto utiliza como base o conteúdo estudado na formação da Alura, mas está sendo adaptado, modificado e estendido por mim conforme avanço nos estudos e adiciono novas funcionalidades.
+
+🛠 Tecnologias Utilizadas
+
+- Java
+
+- Spring Boot
+
+- Spring Data JPA
+
+- PostgreSQL
+
+- Maven
+
+## ▶️ Como executar
+
+**1. Clone o projeto**
+```bash
+git clone https://github.com/seuusuario/seu-repo.git
