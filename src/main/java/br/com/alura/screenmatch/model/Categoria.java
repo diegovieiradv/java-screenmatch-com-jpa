@@ -14,6 +14,7 @@ public enum Categoria {
     Categoria(String categoriaOmdb) {
         this.categoriaOmdb = categoriaOmdb;
     }
+    
     public static Categoria fromSpring(String text){
         for (Categoria categoria : Categoria.values()) {
             if (categoria.categoriaOmdb.equalsIgnoreCase(text)) {
