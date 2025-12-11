@@ -33,6 +33,6 @@ public interface SerieRepository extends JpaRepository<Serie, Long> {
             "WHERE s = :serie AND YEAR(e.dataLancamento) >= :anoLancamento")
     List<Episodio> episodiosPorSerieEAno(Serie serie, int anoLancamento);
 
-
+List<Serie> findTop5ByOrderByEpisodiosDataLancamentoDesc();
 }
 
