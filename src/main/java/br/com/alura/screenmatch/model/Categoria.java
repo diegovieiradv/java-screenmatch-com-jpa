@@ -1,5 +1,7 @@
 package br.com.alura.screenmatch.model;
 
+import java.text.Normalizer;
+
 public enum Categoria {
     ACÃO("action", "Ação"),
     COMEDIA("comedy", "Comedia"),
@@ -11,7 +13,6 @@ public enum Categoria {
     FICÇÃO("ficcao", "Ficção");
 
     private String categoriaOmdb;
-
     private String categoriaPortugues;
 
     Categoria(String categoriaOmdb, String categoriaPortugues) {
@@ -29,8 +30,18 @@ public enum Categoria {
     }
 
     public static Categoria fromPortugues(String text){
+        String textoNormalizado = Normalizer
+                .normalize(text, Normalizer.Form.NFD)
+                .replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
+                .toLowerCase();
+
         for (Categoria categoria : Categoria.values()) {
-            if (categoria.categoriaPortugues.equalsIgnoreCase(text)) {
+            String categoriaNormalizada = Normalizer
+                    .normalize(categoria.categoriaPortugues, Normalizer.Form.NFD)
+                    .replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
+                    .toLowerCase();
+
+            if (categoriaNormalizada.equals(textoNormalizado)) {
                 return categoria;
             }
         }

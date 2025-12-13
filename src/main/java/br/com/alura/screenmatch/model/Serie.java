@@ -45,7 +45,7 @@ public Serie(){}
         this.genero = Categoria.fromSpring(dadosSerie.genero().split(",")[0].trim());
         this.atores = dadosSerie.atores();
         this.poster = dadosSerie.poster();
-        this.sinopse = dadosSerie.sinopse();
+        this.sinopse = dadosSerie.plot();
     //  this.sinopse = ConsultaChatGPT.obterTraducao(dadosSerie.sinopse()).trim();
     }
 

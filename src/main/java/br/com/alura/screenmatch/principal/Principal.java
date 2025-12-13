@@ -94,10 +94,23 @@ public class Principal {
 
     private void buscarSerieWeb() {
         DadosSerie dados = getDadosSerie();
-        Serie serie = new Serie(dados);
+
+        String sinopseTraduzida = Tradutor.traduzir(dados.plot());
+
+        DadosSerie dadosTraduzidos = new DadosSerie(
+                dados.titulo(),
+                dados.totalTemporadas(),
+                dados.avaliacao(),
+                dados.genero(),
+                dados.atores(),
+                dados.poster(),
+                sinopseTraduzida
+        );
+
+        Serie serie = new Serie(dadosTraduzidos);
         repositorio.save(serie);
-        System.out.println(dados);
     }
+
 
     private DadosSerie getDadosSerie() {
         System.out.println("Digite o nome da série para busca");
